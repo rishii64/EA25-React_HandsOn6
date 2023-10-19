@@ -4,7 +4,7 @@ import { Store } from "./StoreCompo";
 
 function EditStudent(){
     const contextData = useContext(Store)
-    const index = useParams()
+    const index = useParams().id
     const nav = useNavigate()
     // console.log(contextData);
     // console.log(index);
@@ -33,11 +33,11 @@ function EditStudent(){
             <label>Name</label>
             <input type="text" placeholder={contextData.data[index].name} name='name' onChange={handleChange}/> <br/>
             <label>Age</label>
-            <input type="number" placeholder={contextData.data[index].age} age='age' onChange={handleChange}/> <br/>
+            <input type="number" placeholder={contextData.data[index].age} name='age' onChange={handleChange}/> <br/>
             <label>Course</label>
-            <input type="text" placeholder={contextData.data[index].course} course='course' onChange={handleChange}/> <br/>
+            <input type="text" placeholder={contextData.data[index].course} name='course' onChange={handleChange}/> <br/>
             <label>Batch</label>
-            <input type="text" placeholder={contextData.data[index].batch} batch='batch' onChange={handleChange}/> <br/>
+            <input type="text" placeholder={contextData.data[index].batch} name='batch' onChange={handleChange}/> <br/>
 
             <button onClick={()=> nav('/student')}>Back</button>
             <button onClick={handleSubmit}>Update</button>

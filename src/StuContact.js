@@ -7,10 +7,10 @@ export default function StuContact() {
   let navigate = useNavigate()
   const contextData = useContext(Store);
   let newObj = {
-      stuName: "",
-      stuAge: "",
-      stuCourse: "",
-      stuBatch: "",
+      name: "",
+      age: "",
+      course: "",
+      batch: "",
   }
 
   const handleChange = (e) => {
@@ -21,17 +21,17 @@ export default function StuContact() {
       contextData.data.push(newObj);
       navigate('/student');
     }
-    console.log(contextData);
+    // console.log(contextData);
 
   return (
     <div id='data'>
       <div id='inputDetails'>
-        <input type="text" name='stuName' placeholder='Enter Student Name' className='stuDescInput' onChange={handleChange} />
-        <input type="number" name='stuAge' placeholder='Enter Student Age' className='stuDescInput' onChange={handleChange} />
+        <input type="text" name='name' placeholder='Enter Student Name' className='stuDescInput' onChange={handleChange} />
+        <input type="number" name='age' placeholder='Enter Student Age' className='stuDescInput' onChange={handleChange} />
       </div>
       <div id='inputDetails'>
-        <input type="text" name='stuCourse' placeholder="Enter Student's Course" className='stuDescInput' onChange={handleChange} />
-        <input type="text" name='stuBatch' placeholder="Enter Student's Batch" className='stuDescInput' onChange={handleChange} />
+        <input type="text" name='course' placeholder="Enter Student's Course" className='stuDescInput' onChange={handleChange} />
+        <input type="text" name='batch' placeholder="Enter Student's Batch" className='stuDescInput' onChange={handleChange} />
       </div>
         <div id='inputDetails'>
           <button id='back' onClick={()=> navigate(-1)}>Back</button>
