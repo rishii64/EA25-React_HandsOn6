@@ -1,0 +1,106 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.App {
+  text-align: center;
+}
+h1{
+  font-family: cursive;
+}
+#links{
+  width: 100%;
+  height: 4em;
+  background: rgb(69, 15, 15);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+#linkHead{
+  text-decoration: none;
+  color: white;
+  font-size: 40px;
+  font-family: Monotype corsiva;
+}
+p{
+  text-align: left;
+  margin: 30px auto auto 50px;
+}
+.title{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 30px auto;
+}
+#btn{
+  width: 14em;
+  height: 3em;
+  border-radius: 20px;
+}
+#table{
+  width: 70%;
+  margin: auto auto;
+}
+th,td{
+  padding: 5px 0px;
+}
+input{
+  height: 50px;
+  padding-left: 10px;
+  border-radius: 5px;
+  border: 1px solid grey;
+  font-size: 20px;
+}
+#data{
+  display: flex;
+  flex-direction: column;
+}
+#inputDetails{
+  margin: 50px 100px;
+  display: flex;
+  justify-content: space-around;
+}
+#back,#update{
+  width: 6em;
+  height: 3em;
+  font-size: 15px;
+  border-radius: 6px;
+  border: 1px solid grey;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+#btn,#back,#update:hover{
+  cursor: pointer;
+}
+@media screen and (max-width:550px) {
+  #linkHead{
+    font-size: calc(20px + 1vw);
+  }
+  h1{
+    font-size: calc(14px + 1vw);
+  }
+  #btn{
+    width: 10em;
+    font-size: calc(8px + 1vw);
+  }
+  #table{
+    font-size: calc(9px + 1vw);
+    width: 95vw;
+  }
+  input{
+    width: 7em;
+    height: 2em;
+    font-size: 15px;
+  }
+  #data{
+    margin-top: 20px;
+  }
+  #inputDetails{
+    margin: 23px 20px;
+    display: flex;
+    justify-content: space-around;
+  }
+  #back,#update{
+    font-size: 8px;
+  }
+}
